@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PRODIGY_WD_03</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- SCREEN: Start -->
+  <div id="start-screen" class="screen active">
+    <button id="btn-start">Start Game</button>
+  </div>
+
+  <!-- SCREEN: Mode Selection -->
+  <div id="mode-screen" class="screen">
+    <div class="glass-box">
+      <h2 class="title">Choose Mode</h2>
+      <button id="btn-ai">Single Player Mode</button>
+      <button id="btn-2p">Dual Player Mode</button>
+    </div>
+  </div>
+
+  <!-- SCREEN: Player Name Input -->
+  <div id="name-screen" class="screen">
+    <div class="glass-box">
+      <h2 class="title">Enter Player Names</h2>
+      <input type="text" id="player1-input" placeholder="Player 1" />
+      <input type="text" id="player2-input" placeholder="Player 2" />
+      <button id="btn-name-submit">Start Game</button>
+    </div>
+  </div>
+
+  <!-- SCREEN: Symbol Selection -->
+  <div id="symbol-screen" class="screen">
+    <div class="glass-box">
+      <h2 id="player-symbol-name">Player X</h2>
+      <p class="subtitle">Choose your symbol</p>
+      <div class="symbol-options">
+        <div class="symbol-box" data-symbol="X">
+          <img src="cross.png" alt="Cross" />
+        </div>
+        <div class="symbol-box" data-symbol="O">
+          <img src="circle.png" alt="Circle" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN: Game -->
+<div id="game-screen" class="screen">
+  <div class="game-layout">
+
+    <!-- LEFT SIDE: TIME & ROUND -->
+    <div class="top-info">
+      <div id="timer-box" class="glass-box side-box">
+        <p class="box-title">TIME</p>
+        <p id="timer">00:00</p>
+      </div>
+
+      <div id="round-box" class="glass-box side-box">
+        <p class="box-title">ROUND</p>
+        <p id="round-counter">1</p>
+      </div>
+    </div>
+    <!-- Scoreboard Box -->
+     <div class="bottom-info">
+<div class="glass-box small-box scoreboard-box">
+  <p class="score-title"><strong>Score Board</strong></p>
+  <div class="score-entry">
+    <p id="score-name-p1">Player 1</p>
+    
+    <p id="score-value-p1">0</p>
+  </div>
+  <div class="score-entry">
+    <p id="score-name-p2">Player 2</p>
+    <p id="score-value-p2">0</p>
+  </div>
+</div>
+     </div>
+
+    <!-- CENTER: Main Game -->
+    <div class="glass-box center-box">
+      <h2 id="players-title">Tic Tac Toe</h2>
+      <div id="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      <p id="status"></p>
+      <button id="btn-restart">Next Round</button>
+    </div>
+
+    <!-- RIGHT SIDE: Symbol Info -->
+    <div id="symbol-info" class="glass-box side-box">
+      <p><strong><span id="chooser-name">Player 1</span></strong> chose: <br><br><img id="chooser-symbol" class="mini-symbol" /></p><br>
+      <p><strong><span id="other-name">Player 2</span></strong> got: <br><br><img id="other-symbol" class="mini-symbol" /></p>
+    </div>
+
+  </div>
+</div>
+<!-- Settings Floating Button -->
+<div class="settings-container">
+  <button id="settings-toggle" class="settings-button">⚙️</button>
+  <div id="settings-menu" class="settings-menu hidden">
+    <button id="audio-toggle">🔊 Audio: On</button>
+    <button id="fullscreen-toggle">⛶ Fullscreen</button>
+  </div>
+</div>
+<audio id="background-music" loop>
+  <source src="your-music-file.mp3" type="audio/mpeg" />
+</audio>
+<div class="copyright">All Rights Reserved ©<br>Arnab Chatterjee | 2025 | Prodigy Infotech</div>
+<div id="difficulty-screen" class="screen">
+  <h2 class="title">Choose Difficulty</h2>
+  <div class="glass-box">
+    <button class="btn-difficulty" data-level="easy">Easy</button>
+    <button class="btn-difficulty" data-level="normal">Normal</button>
+    <button class="btn-difficulty" data-level="hard">Hard</button>
+  </div>
+</div>
+<div id="blur-overlay"></div>
+<div id="fade-overlay"></div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
